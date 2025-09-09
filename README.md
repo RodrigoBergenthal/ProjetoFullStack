@@ -35,3 +35,5 @@ Tamanho fixo: o tamanho de um array é fixo e não pode ser alterado após a sua
 Ausência de métodos: arrays não possuem métodos que permitam a inserção, remoção ou pesquisa de elementos de forma eficiente. Isso pode levar a soluções de código complicadas e ineficientes para tarefas simples.
 
 Justamente por conta desses problemas e dificuldades é que não devemos utilizar arrays para representar uma coleção de elementos, mas sim alguma classe do Java, como a ArrayList, que encapsula e abstrai um array, facilitando a sua utilização via métodos e deixando o código do projeto mais simples de entender e evoluir.
+
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html
