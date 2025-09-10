@@ -1,25 +1,38 @@
-# ProjetoFullStack
-https://github.com/alura-cursos/2914-java-screenmatch-listas-colecoes
-#
-05
-Para saber mais: arrays no Java
- Próxima Atividade
+# 📌 Projeto Full Stack
 
-Em Java, arrays são estruturas de dados que permitem armazenar uma coleção de elementos do mesmo tipo. Eles são muito utilizados para manipulação de dados em projetos de programação.
+Repositório do projeto no GitHub:  
+👉 [https://github.com/alura-cursos/2914-java-screenmatch-listas-colecoes](https://github.com/alura-cursos/2914-java-screenmatch-listas-colecoes)
 
-Para declarar um array em Java, é preciso definir seu tipo e tamanho. Por exemplo, para criar um array de inteiros com tamanho 5, podemos escrever o seguinte código:
+---
 
-int[] numeros = new int[5];Copiar código
-Aqui, estamos declarando um array chamado "numeros" do tipo "int" e com tamanho 5. É importante lembrar que o índice dos elementos de um array começa em 0 e vai até o tamanho do array menos 1.
+## 📚 05 - Para saber mais: Arrays no Java
 
-Após declarar um array, podemos inicializá-lo com valores. Por exemplo, podemos preencher o array "numeros" com os números de 1 a 5 da seguinte forma:
+Em Java, **arrays** são estruturas de dados que armazenam uma coleção de elementos do mesmo tipo. Eles são muito utilizados na manipulação de dados em projetos de programação.
+
+---
+
+### ✅ Como declarar um array
+
+Para criar um array de inteiros com tamanho 5:
+
+java
+int[] numeros = new int[5];
+Aqui, criamos um array chamado numeros do tipo int, com tamanho 5.
+
+Lembre-se: os índices começam em 0 e vão até tamanho - 1.
+🔁 Preenchendo um array
+
+Podemos inicializar o array com valores usando um for:
 
 for (int i = 0; i < numeros.length; i++) {
     numeros[i] = i + 1;
-}Copiar código
-Aqui, estamos percorrendo o array "numeros" utilizando um loop for e preenchendo cada posição com seu respectivo índice mais 1.
+}
 
-Também é possível criar arrays de objetos e não apenas de tipos primitivos. Por exemplo:
+
+Este laço preenche o array numeros com os valores de 1 a 5.
+📦 Arrays de objetos
+
+Também é possível criar arrays de objetos, como no exemplo abaixo:
 
 Filme[] filmes = new Filme[2];
 
@@ -27,22 +40,78 @@ Filme filme1 = new Filme("Avatar", 2009);
 Filme filme2 = new Filme("Dogville", 2003);
 
 filmes[0] = filme1;
-filmes[1] = filme2;Copiar código
-Embora os arrays sejam úteis, eles possuem algumas limitações que podem causar problemas em projetos. Alguns desses problemas incluem:
+filmes[1] = filme2;
 
-Tamanho fixo: o tamanho de um array é fixo e não pode ser alterado após a sua criação. Isso pode ser problemático em situações em que o tamanho dos dados a serem armazenados é desconhecido ou variável.
+⚠️ Limitações dos Arrays
 
-Ausência de métodos: arrays não possuem métodos que permitam a inserção, remoção ou pesquisa de elementos de forma eficiente. Isso pode levar a soluções de código complicadas e ineficientes para tarefas simples.
+Apesar de úteis, arrays possuem algumas limitações:
 
-Justamente por conta desses problemas e dificuldades é que não devemos utilizar arrays para representar uma coleção de elementos, mas sim alguma classe do Java, como a ArrayList, que encapsula e abstrai um array, facilitando a sua utilização via métodos e deixando o código do projeto mais simples de entender e evoluir.
+Tamanho fixo: não pode ser alterado após a criação.
 
-https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html
-#
-Para solidificar esses conceitos, sugerimos atividades práticas (não obrigatórias) que aprimorarão sua compreensão desses princípios fundamentais. Está preparado para aplicar essas ideias?
+Ausência de métodos: como add, remove ou contains.
 
-Crie uma classe Pessoa com atributos como nome, idade, e um método toString que represente esses atributos.
-No método main da classe Principal, crie um ArrayList de Pessoa chamado listaDePessoas.
-Adicione pelo menos três pessoas à lista utilizando o método add.
-Imprima o tamanho da lista utilizando o método size.
-Imprima a primeira pessoa da lista utilizando o método get.
-Imprima a lista completa
+Essas limitações podem tornar o código mais complexo e menos eficiente.
+
+💡 Solução: Use ArrayList
+
+Para superar essas limitações, o Java oferece a classe ArrayList
+, que encapsula um array e fornece métodos práticos para manipulação de dados.
+
+🧪 Atividade prática (opcional)
+
+Quer colocar em prática o que aprendeu? Tente fazer o seguinte:
+
+1. Crie uma classe Pessoa
+
+Com os seguintes atributos:
+
+public class Pessoa {
+    private String nome;
+    private int idade;
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + ", Idade: " + idade;
+    }
+}
+
+2. No método main da classe Principal:
+
+Crie um ArrayList de Pessoa chamado listaDePessoas.
+
+Adicione pelo menos 3 pessoas com o método add.
+
+Imprima:
+
+O tamanho da lista com size()
+
+A primeira pessoa com get(0)
+
+A lista completa com um for ou foreach.
+
+import java.util.ArrayList;
+
+public class Principal {
+    public static void main(String[] args) {
+        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
+
+        listaDePessoas.add(new Pessoa("Ana", 25));
+        listaDePessoas.add(new Pessoa("Carlos", 30));
+        listaDePessoas.add(new Pessoa("Beatriz", 22));
+
+        System.out.println("Tamanho da lista: " + listaDePessoas.size());
+        System.out.println("Primeira pessoa: " + listaDePessoas.get(0));
+
+        System.out.println("Lista completa:");
+        for (Pessoa pessoa : listaDePessoas) {
+            System.out.println(pessoa);
+        }
+    }
+}
+
+---
