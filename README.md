@@ -1,4 +1,4 @@
-# 📌 Projeto Full Stack
+# 📌 Arrays
 
 Repositório do projeto no GitHub:  
 👉 [https://github.com/alura-cursos/2914-java-screenmatch-listas-colecoes](https://github.com/alura-cursos/2914-java-screenmatch-listas-colecoes)
